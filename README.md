@@ -1,7 +1,7 @@
 # Kirby P(arsedown)E(xtra)P(lugin)
 [![Release](https://img.shields.io/github/release/S1SYPHOS/kirby-pep.svg)](https://github.com/S1SYPHOS/kirby-pep/releases) [![License](https://img.shields.io/github/license/S1SYPHOS/kirby-pep.svg)](https://github.com/S1SYPHOS/kirby-pep/blob/master/LICENSE) [![Issues](https://img.shields.io/github/issues/S1SYPHOS/kirby-pep.svg)](https://github.com/S1SYPHOS/kirby-pep/issues)
 
-This plugin enhances Kirby's built-in markdown parser [ParsedownExtra](https://github.com/erusev/parsedown-extra) by adding some [PEP](https://github.com/tovic/parsedown-extra-plugin) 
+This plugin modifies Kirby's `markdown` component and enhances the built-in markdown parser [ParsedownExtra](https://github.com/erusev/parsedown-extra) by adding some [PEP](https://github.com/tovic/parsedown-extra-plugin).
 
 ## Getting started
 Use one of the following methods to install & use `kirby-pep`:
@@ -40,4 +40,3 @@ Change `kirby-pep` [options](https://github.com/tovic/parsedown-extra-plugin#fea
 
 ## Special Thanks
 I'd like to thank everybody that's making great software - you people are awesome. Also I'm always thankful for feedback and bug reports :)
-
