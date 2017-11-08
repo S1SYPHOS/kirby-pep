@@ -3,6 +3,11 @@
 
 This plugin modifies Kirby's `markdown` component and enhances the built-in markdown parser [ParsedownExtra](https://github.com/erusev/parsedown-extra) by adding some [PEP](https://github.com/tovic/parsedown-extra-plugin).
 
+**Table of contents**
+- [1. Getting started](#getting-started)
+- [2. Configuration](#configuration)
+- [3. Credits / License](#credits--license)
+
 ## Getting started
 Use one of the following methods to install & use `kirby-pep`:
 
@@ -37,6 +42,9 @@ Change `kirby-pep` [options](https://github.com/tovic/parsedown-extra-plugin#fea
 | `plugin.kirby-pep.code_block_attr_on_parent` | Boolean | `false` | Moves (inner) `<code>` element attributes on (outer) `<pre>` element. |
 
 **Currently only these two options are available.** In the future, more options will be supported - feel free to [open a PR](https://github.com/S1SYPHOS/kirby-pep/compare)!
+
+## Credits / License
+`kirby-pep` is based on Taufik Nurrohman's `parsedown-extra-plugin` library (an extension to [ParsedownExtra](https://github.com/erusev/parsedown-extra)). It is licensed under the [MIT License](LICENSE), but **using Kirby in production** requires you to [buy a license](https://getkirby.com/buy). Are you ready for the [next step](https://getkirby.com/next)?
 
 ## Special Thanks
 I'd like to thank everybody that's making great software - you people are awesome. Also I'm always thankful for feedback and bug reports :)
