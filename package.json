@@ -1,6 +1,6 @@
 {
   "name": "kirby-pep",
-  "description": "Supercharging Parsedown for Kirby with ParsedownExtraPlugin",
+  "description": " Supercharging Parsedown with ParsedownExtraPlugin for Kirby",
   "author": "S1SYPHOS <hello@twobrain.io>",
   "version": "0.1.0-beta",
   "type": "kirby-plugin",
