@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Kirby PEP - Supercharging Parsedown for Kirby with ParsedownExtraPlugin
+ * Kirby PEP -  Supercharging Parsedown with ParsedownExtraPlugin for Kirby
  *
  * @package   Kirby CMS
  * @author    S1SYPHOS <hello@twobrain.io>
