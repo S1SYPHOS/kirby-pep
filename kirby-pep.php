@@ -12,12 +12,14 @@
 
 if(!c::get('plugin.kirby-pep')) return;
 
-// Loading ParsedownExtraPlugin & core
+// Loading ParsedownExtraPlugin
+require_once __DIR__ . DS . 'vendor' . DS . 'ParsedownExtraPlugin.php';
+
+// Loading settings & core
 load([
-  'parsedownextraplugin'    => __DIR__ . DS . 'vendor' . DS . 'ParsedownExtraPlugin.php',
-  's1syphos\\pep\\markdown' => __DIR__ . DS . 'core' . DS . 'markdown.php'
+  's1syphos\\pep\\settings'     => __DIR__ . DS . 'core' . DS . 'settings.php',
+  's1syphos\\pep\\markdown'     => __DIR__ . DS . 'core' . DS . 'markdown.php'
 ]);
 
 // Registering with Kirby's extension registry
 kirby()->set('component', 'markdown', 'S1SYPHOS\\PEP\\MARKDOWN');
-

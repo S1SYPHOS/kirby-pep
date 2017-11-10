@@ -21,7 +21,7 @@ class Markdown extends \Kirby\Component\Markdown {
 
   /**
    * Returns the default options for the component
-   * 
+   *
    * @return array
    */
 
@@ -34,9 +34,9 @@ class Markdown extends \Kirby\Component\Markdown {
   }
 
   /**
-   * Initializes the Parsedown parser and 
+   * Initializes the Parsedown parser and
    * transforms the given markdown to HTML
-   * 
+   *
    * @param string $markdown
    * @return string
    */
@@ -46,15 +46,29 @@ class Markdown extends \Kirby\Component\Markdown {
     if(!$this->kirby->options['markdown']) {
       return $markdown;
     } else {
-      // Instantiating ParsedownExtraPlugin 
+      // Instantiating ParsedownExtraPlugin
       $parsedown = new ParsedownExtraPlugin();
-
-      // Configuring  options  - see https://github.com/tovic/parsedown-extra-plugin#features
-      $parsedown->code_class = c::get('plugin.kirby-pep.code_class') ? c::get('plugin.kirby-pep.code_class') : 'language-%s';
-      $parsedown->code_block_attr_on_parent = c::get('plugin.kirby-pep.code_block_attr_on_parent') ? true : false;
 
       // set markdown auto-breaks
       $parsedown->setBreaksEnabled($this->kirby->options['markdown.breaks']);
+
+      /**
+       * Configuring ParsedownExtraPlugin options
+       *
+       * https://github.com/tovic/parsedown-extra-plugin#features
+       */
+
+      // Custom Code Class / Text Format
+      $parsedown->code_class = settings::code_class();
+      $parsedown->code_text = settings::code_text();
+      $parsedown->code_block_text = settings::code_block_text();
+
+      // Putting <code> attributes on <pre> element
+      $parsedown->code_block_attr_on_parent = settings::code_block_attr_on_parent();
+
+      // Custom Table (Alignment) Class
+      $parsedown->table_class = settings::table_class();
+      $parsedown->table_align_class = settings::table_align_class();
 
       // Parse it!
       return $parsedown->text($markdown);
