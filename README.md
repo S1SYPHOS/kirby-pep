@@ -36,12 +36,44 @@ In order to enable features of [ParsedownExtraPlugin](https://github.com/tovic/p
 ## Configuration
 Change `kirby-pep` [options](https://github.com/tovic/parsedown-extra-plugin#features) to suit your needs:
 
-| Option | Type | Default | Description |
-| --- | --- | --- | --- |
-| `plugin.kirby-pep.code_class` | String | `language-%s` | Defines the classes used by `<code>` elements (`%s` outputs the language specified at the beginning of your code block). |
-| `plugin.kirby-pep.code_block_attr_on_parent` | Boolean | `false` | Moves (inner) `<code>` element attributes on (outer) `<pre>` element. |
+- Element prefix (HTML / XHTML)
+  - `'element_suffix' => '>' // HTML5`
+- Predefined abbreviations
+  - `'abbreviations' => []`
+- Predefined links
+  - `'links' => null`
+- Custom attributes for (external) links / images
+  - `'links_attr' => []`
+  - `'links_external_attr' => ['rel' => 'nofollow', 'target' => '_blank']`
+  - `'images_attr' => null`
+  - `'images_external_attr' => null`
+- Custom code class / (block) text
+  - `'code_class' => 'language-%s'`
+  - `'code_text' => null`
+  - `'code_block_text' => null`
+- Putting `<code>` attributes on `<pre>` element
+  - `'code_block_attr_on_parent'   => false`
+- Custom table (alignment) class
+  - `'table_class' => null`
+  - `'table_align_class' => null`
+- Custom footnote class
+  - `'footnote_class' => 'footnotes'`
+- Custom footnote link id / class / text
+  - `'footnote_link_id' => 'fnref:%s'`
+  - `'footnote_link_class' => 'footnote-ref'`
+  - `'footnote_link_text' => '[%s]'`
+- Custom footnote back link id / class / text
+  - `'footnote_back_link_id' => 'fnref:%s-%s'`
+  - `'footnote_back_link_class' => 'footnote-backref'`
+  - `'footnote_back_link_text' => '↩'`
 
-**Currently only these two options are available.** In the future, more options will be supported - feel free to [open a PR](https://github.com/S1SYPHOS/kirby-pep/compare)!
+If you'd like to change them, just prefix each option with `plugin.kirby-pep.` in your `config.php` and you're set! With the following option in place, this plugin integrates seemlessly with `kirby-highlight`, generating themeable [server-side syntax highlighting](https://github.com/S1SYPHOS/kirby-highlight) for Kirby:
+
+```text
+c::set('plugin.kirby-pep.code_class', 'language-%s hljs');
+```
+
+These [examples](https://github.com/tovic/parsedown-extra-plugin#features) are a **good starting point**, too.
 
 ## Credits / License
 `kirby-pep` is based on Taufik Nurrohman's `parsedown-extra-plugin` library (an extension to [ParsedownExtra](https://github.com/erusev/parsedown-extra)). It is licensed under the [MIT License](LICENSE), but **using Kirby in production** requires you to [buy a license](https://getkirby.com/buy). Are you ready for the [next step](https://getkirby.com/next)?
