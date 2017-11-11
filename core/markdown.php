@@ -55,10 +55,25 @@ class Markdown extends \Kirby\Component\Markdown {
       /**
        * Configuring ParsedownExtraPlugin options
        *
-       * https://github.com/tovic/parsedown-extra-plugin#features
+       * See https://github.com/tovic/parsedown-extra-plugin#features
        */
 
-      // Custom Code Class / Text Format
+      // HTML or XHTML
+      $parsedown->element_suffix = settings::element_suffix();
+
+      // Predefined abbreviations
+      $parsedown->abbreviations = settings::abbreviations();
+
+      // Predefined links
+      $parsedown->links = settings::links();
+
+      // Custom attributes for (external) links / images
+      $parsedown->links_attr = settings::links_attr();
+      $parsedown->links_external_attr = settings::links_external_attr();
+      $parsedown->images_attr = settings::images_attr();
+      $parsedown->images_external_attr = settings::images_external_attr();
+
+      // Custom code class / (block) text
       $parsedown->code_class = settings::code_class();
       $parsedown->code_text = settings::code_text();
       $parsedown->code_block_text = settings::code_block_text();
@@ -66,14 +81,25 @@ class Markdown extends \Kirby\Component\Markdown {
       // Putting <code> attributes on <pre> element
       $parsedown->code_block_attr_on_parent = settings::code_block_attr_on_parent();
 
-      // Custom Table (Alignment) Class
+      // Custom table (alignment) class
       $parsedown->table_class = settings::table_class();
       $parsedown->table_align_class = settings::table_align_class();
+
+      // Custom footnote class
+      $parsedown->footnote_class = settings::footnote_class();
+
+      // Custom footnote link id / class / text
+      $parsedown->footnote_link_id = settings::footnote_link_id();
+      $parsedown->footnote_link_class = settings::footnote_link_class();
+      $parsedown->footnote_link_text = settings::footnote_link_text();
+
+      // Custom footnote back link id / class / text
+      $parsedown->footnote_back_link_id = settings::footnote_back_link_id();
+      $parsedown->footnote_back_link_class = settings::footnote_back_link_class();
+      $parsedown->footnote_back_link_text = settings::footnote_back_link_text();
 
       // Parse it!
       return $parsedown->text($markdown);
     }
-
   }
-
 }
