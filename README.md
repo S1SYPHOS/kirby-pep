@@ -4,9 +4,29 @@
 This plugin modifies Kirby's `markdown` component and enhances the built-in markdown parser [ParsedownExtra](https://github.com/erusev/parsedown-extra) by adding some [PEP](https://github.com/tovic/parsedown-extra-plugin).
 
 **Table of contents**
-- [1. Getting started](#getting-started)
-- [2. Configuration](#configuration)
-- [3. Credits / License](#credits--license)
+- [1. What's MarkdownExtra?](#whats-markdownextra)
+- [2. Getting started](#getting-started)
+- [3. Configuration](#configuration)
+- [4. Credits / License](#credits--license)
+
+## What's MarkdownExtra?
+> Markdown Extra is an extension to PHP Markdown implementing some features currently not available with the plain Markdown syntax [such as]
+> - Inline HTML
+> - Markdown Inside HTML Blocks
+> - Special Attributes
+> - Fenced Code Blocks
+> - Tables
+> - Definition Lists
+> - Footnotes
+> - Output
+> - Abbreviations
+> - Ordered Lists
+> - Emphasis
+> - Backslash Escapes
+>
+> By [Michel Fortin](https://michelf.ca/projects/php-markdown/extra/)
+
+While these are already nice to have, [PEP](https://github.com/tovic/parsedown-extra-plugin) takes global configurability just a bit further - because Markdown!
 
 ## Getting started
 Use one of the following methods to install & use `kirby-pep`:
