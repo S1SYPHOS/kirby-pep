@@ -6,6 +6,7 @@ use c;
 use Parsedown;
 use ParsedownExtra;
 use ParsedownExtraPlugin;
+use Field;
 
 /**
  * Kirby Markdown Parser Component
@@ -28,7 +29,6 @@ class Markdown extends \Kirby\Component\Markdown {
   public function defaults() {
     return [
       'markdown'        => true,
-      // 'markdown.extra'  => false,
       'markdown.breaks' => true,
     ];
   }
@@ -41,7 +41,7 @@ class Markdown extends \Kirby\Component\Markdown {
    * @return string
    */
 
-  public function parse($markdown) {
+  public function parse($markdown, Field $field = null) {
 
     if(!$this->kirby->options['markdown']) {
       return $markdown;
