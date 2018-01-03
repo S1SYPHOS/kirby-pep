@@ -7,7 +7,8 @@ This plugin modifies Kirby's `markdown` component and enhances the built-in mark
 - [1. What's MarkdownExtra?](#whats-markdownextra)
 - [2. Getting started](#getting-started)
 - [3. Configuration](#configuration)
-- [4. Credits / License](#credits--license)
+- [4. Known bugs](#known-bugs)
+- [5. Credits / License](#credits--license)
 
 ## What's MarkdownExtra?
 > Markdown Extra is an extension to PHP Markdown implementing some features currently not available with the plain Markdown syntax [such as]
@@ -94,6 +95,9 @@ c::set('plugin.kirby-pep.code_class', 'language-%s hljs');
 ```
 
 These [examples](https://github.com/tovic/parsedown-extra-plugin#features) are a **good starting point**, too.
+
+## Known bugs
+Custom attributes for (external) links / images currently don't work - feel free to submit a PR with your solution!
 
 ## Credits / License
 `kirby-pep` is based on Taufik Nurrohman's `parsedown-extra-plugin` library (an extension to [ParsedownExtra](https://github.com/erusev/parsedown-extra)). It is licensed under the [MIT License](LICENSE), but **using Kirby in production** requires you to [buy a license](https://getkirby.com/buy). Are you ready for the [next step](https://getkirby.com/next)?
