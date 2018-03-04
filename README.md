@@ -7,7 +7,7 @@ This plugin modifies Kirby's `markdown` component and enhances the built-in mark
 - [1. What's MarkdownExtra?](#whats-markdownextra)
 - [2. Getting started](#getting-started)
 - [3. Configuration](#configuration)
-- [4. Known bugs](#known-bugs)
+- [4. Troubleshooting](#troubleshooting)
 - [5. Credits / License](#credits--license)
 
 ## What's MarkdownExtra?
@@ -38,6 +38,12 @@ If you know your way around Git, you can download this plugin as a [submodule](h
 
 ```text
 git submodule add https://github.com/S1SYPHOS/kirby-pep.git site/plugins/kirby-pep
+```
+
+### Composer
+
+```text
+composer require S1SYPHOS/kirby-pep
 ```
 
 ### Clone or download
@@ -96,7 +102,7 @@ c::set('plugin.kirby-pep.code_class', 'language-%s hljs');
 
 These [examples](https://github.com/tovic/parsedown-extra-plugin#features) are a **good starting point**, too.
 
-## Known bugs
+## Troubleshooting
 Custom attributes for (external) links / images currently don't work - feel free to submit a PR with your solution!
 
 ## Credits / License
